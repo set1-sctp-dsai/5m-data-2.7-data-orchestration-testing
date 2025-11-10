@@ -1,0 +1,1275 @@
+[0m16:13:09.770424 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b9bad3448d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b9bad347850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b9bad34e150>]}
+
+
+============================== 16:13:09.790392 | 262c7d85-da05-447a-8b34-af8b36d6897c ==============================
+[0m16:13:09.790392 [info ] [MainThread]: Running with dbt=1.9.6
+[0m16:13:09.792373 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': '/home/ds2/lesson/5m-data-2.7-data-orchestration-testing/extra/dagster_orchestration_dbt/logs', 'fail_fast': 'False', 'profiles_dir': '/home/ds2/lesson/5m-data-2.7-data-orchestration-testing/extra/dagster_orchestration_dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt seed', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m16:13:48.785115 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '262c7d85-da05-447a-8b34-af8b36d6897c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b9b8a2bd450>]}
+[0m16:13:49.045224 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '262c7d85-da05-447a-8b34-af8b36d6897c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b9bafc6e510>]}
+[0m16:13:49.047195 [info ] [MainThread]: Registered adapter: bigquery=1.9.2
+[0m16:13:49.601000 [debug] [MainThread]: checksum: dd6dc1e5178459e3de3bf2eeb7c86bed4be2266c311fce8c15d86eb4ff94e7ad, vars: {}, profile: , target: , version: 1.9.6
+[0m16:13:49.603231 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m16:13:49.603908 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '262c7d85-da05-447a-8b34-af8b36d6897c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b9b8f94c310>]}
+[0m16:13:52.227490 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '262c7d85-da05-447a-8b34-af8b36d6897c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b9b8a0825d0>]}
+[0m16:13:52.375673 [debug] [MainThread]: Wrote artifact WritableManifest to /home/ds2/lesson/5m-data-2.7-data-orchestration-testing/extra/dagster_orchestration_dbt/target/manifest.json
+[0m16:13:52.377992 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/ds2/lesson/5m-data-2.7-data-orchestration-testing/extra/dagster_orchestration_dbt/target/semantic_manifest.json
+[0m16:13:52.540540 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '262c7d85-da05-447a-8b34-af8b36d6897c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b9b89397d10>]}
+[0m16:13:52.542838 [info ] [MainThread]: Found 2 models, 1 seed, 6 data tests, 494 macros
+[0m16:13:52.544729 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '262c7d85-da05-447a-8b34-af8b36d6897c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b9b8a3f0b10>]}
+[0m16:13:52.552003 [info ] [MainThread]: 
+[0m16:13:52.555752 [info ] [MainThread]: Concurrency: 1 threads (target='jaffle_sql')
+[0m16:13:52.557499 [info ] [MainThread]: 
+[0m16:13:52.560235 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m16:13:52.564613 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_sctp-dsai-ds3'
+[0m16:13:52.566860 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:14:10.389653 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_sctp-dsai-ds3, now create_sctp-dsai-ds3_jaffle_demo)
+[0m16:14:10.410826 [debug] [ThreadPool]: Creating schema "database: "sctp-dsai-ds3"
+schema: "jaffle_demo"
+"
+[0m16:14:10.469947 [debug] [ThreadPool]: On create_sctp-dsai-ds3_jaffle_demo: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "dbt_demo", "target_name": "jaffle_sql", "connection_name": "create_sctp-dsai-ds3_jaffle_demo"} */
+create schema if not exists `sctp-dsai-ds3`.`jaffle_demo`
+  
+[0m16:14:10.471542 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:14:11.329899 [debug] [ThreadPool]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=sctp-dsai-ds3&j=bq:US:b8e02491-c8a7-47e8-85bc-2e89c4a4988b&page=queryresults
+[0m16:14:11.987716 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_sctp-dsai-ds3_jaffle_demo, now list_sctp-dsai-ds3_jaffle_demo)
+[0m16:14:11.990051 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:14:12.411279 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '262c7d85-da05-447a-8b34-af8b36d6897c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b9baf9d37d0>]}
+[0m16:14:12.418308 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:14:12.483663 [debug] [Thread-1 (]: Began running node seed.dbt_demo.raw_customers
+[0m16:14:12.487426 [info ] [Thread-1 (]: 1 of 1 START seed file jaffle_demo.raw_customers ............................... [RUN]
+[0m16:14:12.491702 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_sctp-dsai-ds3_jaffle_demo, now seed.dbt_demo.raw_customers)
+[0m16:14:12.500717 [debug] [Thread-1 (]: Began compiling node seed.dbt_demo.raw_customers
+[0m16:14:12.504448 [debug] [Thread-1 (]: Began executing node seed.dbt_demo.raw_customers
+[0m16:14:12.675647 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:14:22.124654 [debug] [Thread-1 (]: On seed.dbt_demo.raw_customers: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "dbt_demo", "target_name": "jaffle_sql", "node_id": "seed.dbt_demo.raw_customers"} */
+
+    alter table `sctp-dsai-ds3`.`jaffle_demo`.`raw_customers` set OPTIONS()
+  
+[0m16:14:22.629710 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=sctp-dsai-ds3&j=bq:US:d8e7df08-5d82-4ffd-93bb-a1f6f66633d7&page=queryresults
+[0m16:14:23.379981 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.dbt_demo.raw_customers"
+[0m16:14:23.469465 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '262c7d85-da05-447a-8b34-af8b36d6897c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b9b8951f250>]}
+[0m16:14:23.471417 [info ] [Thread-1 (]: 1 of 1 OK loaded seed file jaffle_demo.raw_customers ........................... [[32mINSERT 100[0m in 10.96s]
+[0m16:14:23.479510 [debug] [Thread-1 (]: Finished running node seed.dbt_demo.raw_customers
+[0m16:14:23.485521 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m16:14:23.487443 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:14:23.489202 [debug] [MainThread]: Connection 'seed.dbt_demo.raw_customers' was properly closed.
+[0m16:14:23.490414 [info ] [MainThread]: 
+[0m16:14:23.495062 [info ] [MainThread]: Finished running 1 seed in 0 hours 0 minutes and 30.93 seconds (30.93s).
+[0m16:14:23.497085 [debug] [MainThread]: Command end result
+[0m16:14:23.575591 [debug] [MainThread]: Wrote artifact WritableManifest to /home/ds2/lesson/5m-data-2.7-data-orchestration-testing/extra/dagster_orchestration_dbt/target/manifest.json
+[0m16:14:23.583537 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/ds2/lesson/5m-data-2.7-data-orchestration-testing/extra/dagster_orchestration_dbt/target/semantic_manifest.json
+[0m16:14:23.602082 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/ds2/lesson/5m-data-2.7-data-orchestration-testing/extra/dagster_orchestration_dbt/target/run_results.json
+[0m16:14:23.602894 [info ] [MainThread]: 
+[0m16:14:23.603916 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m16:14:23.604572 [info ] [MainThread]: 
+[0m16:14:23.605555 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m16:14:23.616368 [debug] [MainThread]: Resource report: {"command_name": "seed", "command_success": true, "command_wall_clock_time": 76.899666, "process_in_blocks": "262448", "process_kernel_time": 8.425789, "process_mem_max_rss": "409928", "process_out_blocks": "3144", "process_user_time": 19.582949}
+[0m16:14:23.617974 [debug] [MainThread]: Command `dbt seed` succeeded at 16:14:23.617573 after 76.90 seconds
+[0m16:14:23.619180 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b9bb162cbd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b9bb15a36d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b9bb174e150>]}
+[0m16:14:23.619845 [debug] [MainThread]: Flushing usage events
+[0m16:14:25.165279 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:14:55.589326 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79752e700d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79752e576bd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79752e577a50>]}
+
+
+============================== 16:14:55.620127 | 62728186-519a-4dc5-b3c4-f0da60106a35 ==============================
+[0m16:14:55.620127 [info ] [MainThread]: Running with dbt=1.9.6
+[0m16:14:55.624270 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': '/home/ds2/lesson/5m-data-2.7-data-orchestration-testing/extra/dagster_orchestration_dbt', 'log_path': '/home/ds2/lesson/5m-data-2.7-data-orchestration-testing/extra/dagster_orchestration_dbt/logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'invocation_command': 'dbt run', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m16:15:18.873637 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '62728186-519a-4dc5-b3c4-f0da60106a35', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79752f385610>]}
+[0m16:15:19.039879 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '62728186-519a-4dc5-b3c4-f0da60106a35', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x797530f7d990>]}
+[0m16:15:19.041275 [info ] [MainThread]: Registered adapter: bigquery=1.9.2
+[0m16:15:20.199152 [debug] [MainThread]: checksum: dd6dc1e5178459e3de3bf2eeb7c86bed4be2266c311fce8c15d86eb4ff94e7ad, vars: {}, profile: , target: , version: 1.9.6
+[0m16:15:21.030644 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m16:15:21.037234 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m16:15:21.137389 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '62728186-519a-4dc5-b3c4-f0da60106a35', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79752f3869d0>]}
+[0m16:15:21.274223 [debug] [MainThread]: Wrote artifact WritableManifest to /home/ds2/lesson/5m-data-2.7-data-orchestration-testing/extra/dagster_orchestration_dbt/target/manifest.json
+[0m16:15:21.281615 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/ds2/lesson/5m-data-2.7-data-orchestration-testing/extra/dagster_orchestration_dbt/target/semantic_manifest.json
+[0m16:15:21.382968 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '62728186-519a-4dc5-b3c4-f0da60106a35', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79750b479290>]}
+[0m16:15:21.384469 [info ] [MainThread]: Found 2 models, 1 seed, 6 data tests, 494 macros
+[0m16:15:21.385613 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '62728186-519a-4dc5-b3c4-f0da60106a35', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79750b1d3f90>]}
+[0m16:15:21.398060 [info ] [MainThread]: 
+[0m16:15:21.399268 [info ] [MainThread]: Concurrency: 1 threads (target='jaffle_sql')
+[0m16:15:21.400286 [info ] [MainThread]: 
+[0m16:15:21.401742 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m16:15:21.410472 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_sctp-dsai-ds3'
+[0m16:15:21.411638 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:15:33.094451 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_sctp-dsai-ds3, now list_sctp-dsai-ds3_jaffle_demo)
+[0m16:15:33.095586 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:15:33.605919 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '62728186-519a-4dc5-b3c4-f0da60106a35', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79750b6c1450>]}
+[0m16:15:33.610119 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:15:33.656442 [debug] [Thread-1 (]: Began running node model.dbt_demo.customers
+[0m16:15:33.659369 [info ] [Thread-1 (]: 1 of 2 START sql table model jaffle_demo.customers ............................. [RUN]
+[0m16:15:33.662797 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_sctp-dsai-ds3_jaffle_demo, now model.dbt_demo.customers)
+[0m16:15:33.665216 [debug] [Thread-1 (]: Began compiling node model.dbt_demo.customers
+[0m16:15:33.699172 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_demo.customers"
+[0m16:15:33.713582 [debug] [Thread-1 (]: Began executing node model.dbt_demo.customers
+[0m16:15:33.784233 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_demo.customers"
+[0m16:15:33.786936 [debug] [Thread-1 (]: On model.dbt_demo.customers: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "dbt_demo", "target_name": "jaffle_sql", "node_id": "model.dbt_demo.customers"} */
+
+  
+    
+
+    create or replace table `sctp-dsai-ds3`.`jaffle_demo`.`customers`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      with source as (
+    select * from `sctp-dsai-ds3`.`jaffle_demo`.`raw_customers`
+
+),
+
+renamed as (
+
+    select
+        id as customer_id,
+        first_name,
+        last_name
+
+    from source
+
+)
+
+select * from renamed
+    );
+  
+[0m16:15:33.787669 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:15:34.654479 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=sctp-dsai-ds3&j=bq:US:75c35484-e050-4095-b9a7-c4ad5855e694&page=queryresults
+[0m16:15:37.373066 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '62728186-519a-4dc5-b3c4-f0da60106a35', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79750b73a890>]}
+[0m16:15:37.374628 [info ] [Thread-1 (]: 1 of 2 OK created sql table model jaffle_demo.customers ........................ [[32mCREATE TABLE (100.0 rows, 1.9 KiB processed)[0m in 3.69s]
+[0m16:15:37.382906 [debug] [Thread-1 (]: Finished running node model.dbt_demo.customers
+[0m16:15:37.389263 [debug] [Thread-1 (]: Began running node model.dbt_demo.customer_processed
+[0m16:15:37.390451 [info ] [Thread-1 (]: 2 of 2 START sql table model jaffle_demo.customer_processed .................... [RUN]
+[0m16:15:37.391641 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_demo.customers, now model.dbt_demo.customer_processed)
+[0m16:15:37.392550 [debug] [Thread-1 (]: Began compiling node model.dbt_demo.customer_processed
+[0m16:15:37.410016 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_demo.customer_processed"
+[0m16:15:37.426251 [debug] [Thread-1 (]: Began executing node model.dbt_demo.customer_processed
+[0m16:15:37.443866 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_demo.customer_processed"
+[0m16:15:37.456110 [debug] [Thread-1 (]: On model.dbt_demo.customer_processed: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "dbt_demo", "target_name": "jaffle_sql", "node_id": "model.dbt_demo.customer_processed"} */
+
+  
+    
+
+    create or replace table `sctp-dsai-ds3`.`jaffle_demo`.`customer_processed`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      with source as (
+    select * from `sctp-dsai-ds3`.`jaffle_demo`.`customers`
+
+),
+
+processing as (
+
+    select
+        customer_id as new_customer_id,
+        last_name as new_last_name
+
+    from source
+
+)
+
+select * from processing
+    );
+  
+[0m16:15:37.457744 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:15:38.242901 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=sctp-dsai-ds3&j=bq:US:0f462f9e-4fea-43c6-b562-fd5c9f909864&page=queryresults
+[0m16:15:40.676428 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '62728186-519a-4dc5-b3c4-f0da60106a35', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x797508cd92d0>]}
+[0m16:15:40.678867 [info ] [Thread-1 (]: 2 of 2 OK created sql table model jaffle_demo.customer_processed ............... [[32mCREATE TABLE (100.0 rows, 1.2 KiB processed)[0m in 3.28s]
+[0m16:15:40.680879 [debug] [Thread-1 (]: Finished running node model.dbt_demo.customer_processed
+[0m16:15:40.686744 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m16:15:40.688646 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:15:40.689989 [debug] [MainThread]: Connection 'model.dbt_demo.customer_processed' was properly closed.
+[0m16:15:40.691436 [info ] [MainThread]: 
+[0m16:15:40.692866 [info ] [MainThread]: Finished running 2 table models in 0 hours 0 minutes and 19.29 seconds (19.29s).
+[0m16:15:40.695587 [debug] [MainThread]: Command end result
+[0m16:15:40.767340 [debug] [MainThread]: Wrote artifact WritableManifest to /home/ds2/lesson/5m-data-2.7-data-orchestration-testing/extra/dagster_orchestration_dbt/target/manifest.json
+[0m16:15:40.781793 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/ds2/lesson/5m-data-2.7-data-orchestration-testing/extra/dagster_orchestration_dbt/target/semantic_manifest.json
+[0m16:15:40.800104 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/ds2/lesson/5m-data-2.7-data-orchestration-testing/extra/dagster_orchestration_dbt/target/run_results.json
+[0m16:15:40.802913 [info ] [MainThread]: 
+[0m16:15:40.806047 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m16:15:40.809424 [info ] [MainThread]: 
+[0m16:15:40.812501 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m16:15:40.827065 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 46.402176, "process_in_blocks": "254136", "process_kernel_time": 4.338311, "process_mem_max_rss": "364344", "process_out_blocks": "2120", "process_user_time": 11.587858}
+[0m16:15:40.829105 [debug] [MainThread]: Command `dbt run` succeeded at 16:15:40.828487 after 46.40 seconds
+[0m16:15:40.831685 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79752e576bd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79753296cbd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7975328e3690>]}
+[0m16:15:40.833976 [debug] [MainThread]: Flushing usage events
+[0m16:15:42.082949 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:16:17.311004 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x776d18148b90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x776d18148890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x776d1814acd0>]}
+
+
+============================== 16:16:17.323548 | 6f35c5d3-4cac-4f2d-9c91-a9c94b78de22 ==============================
+[0m16:16:17.323548 [info ] [MainThread]: Running with dbt=1.9.6
+[0m16:16:17.324654 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/home/ds2/lesson/5m-data-2.7-data-orchestration-testing/extra/dagster_orchestration_dbt/logs', 'profiles_dir': '/home/ds2/lesson/5m-data-2.7-data-orchestration-testing/extra/dagster_orchestration_dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt test', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m16:16:41.367264 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '6f35c5d3-4cac-4f2d-9c91-a9c94b78de22', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x776d18d40750>]}
+[0m16:16:41.486911 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '6f35c5d3-4cac-4f2d-9c91-a9c94b78de22', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x776d1aa01e50>]}
+[0m16:16:41.487886 [info ] [MainThread]: Registered adapter: bigquery=1.9.2
+[0m16:16:41.873775 [debug] [MainThread]: checksum: dd6dc1e5178459e3de3bf2eeb7c86bed4be2266c311fce8c15d86eb4ff94e7ad, vars: {}, profile: , target: , version: 1.9.6
+[0m16:16:42.367391 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m16:16:42.368181 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m16:16:42.452851 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '6f35c5d3-4cac-4f2d-9c91-a9c94b78de22', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x776cf51d4710>]}
+[0m16:16:42.574266 [debug] [MainThread]: Wrote artifact WritableManifest to /home/ds2/lesson/5m-data-2.7-data-orchestration-testing/extra/dagster_orchestration_dbt/target/manifest.json
+[0m16:16:42.576746 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/ds2/lesson/5m-data-2.7-data-orchestration-testing/extra/dagster_orchestration_dbt/target/semantic_manifest.json
+[0m16:16:42.698019 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '6f35c5d3-4cac-4f2d-9c91-a9c94b78de22', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x776cf4b77d50>]}
+[0m16:16:42.699469 [info ] [MainThread]: Found 2 models, 1 seed, 6 data tests, 494 macros
+[0m16:16:42.700693 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6f35c5d3-4cac-4f2d-9c91-a9c94b78de22', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x776cf4c5b790>]}
+[0m16:16:42.706163 [info ] [MainThread]: 
+[0m16:16:42.707310 [info ] [MainThread]: Concurrency: 1 threads (target='jaffle_sql')
+[0m16:16:42.709426 [info ] [MainThread]: 
+[0m16:16:42.711116 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m16:16:42.723179 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_sctp-dsai-ds3_jaffle_demo'
+[0m16:16:42.724134 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:16:46.008314 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6f35c5d3-4cac-4f2d-9c91-a9c94b78de22', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x776cf4fa7410>]}
+[0m16:16:46.009265 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:16:46.015553 [debug] [Thread-1 (]: Began running node test.dbt_demo.not_null_customer_processed_new_customer_id.3e9bf82172
+[0m16:16:46.016242 [info ] [Thread-1 (]: 1 of 6 START test not_null_customer_processed_new_customer_id .................. [RUN]
+[0m16:16:46.017074 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_sctp-dsai-ds3_jaffle_demo, now test.dbt_demo.not_null_customer_processed_new_customer_id.3e9bf82172)
+[0m16:16:46.020352 [debug] [Thread-1 (]: Began compiling node test.dbt_demo.not_null_customer_processed_new_customer_id.3e9bf82172
+[0m16:16:46.049675 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_demo.not_null_customer_processed_new_customer_id.3e9bf82172"
+[0m16:16:46.051206 [debug] [Thread-1 (]: Began executing node test.dbt_demo.not_null_customer_processed_new_customer_id.3e9bf82172
+[0m16:16:46.083339 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_demo.not_null_customer_processed_new_customer_id.3e9bf82172"
+[0m16:16:46.084883 [debug] [Thread-1 (]: On test.dbt_demo.not_null_customer_processed_new_customer_id.3e9bf82172: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "dbt_demo", "target_name": "jaffle_sql", "node_id": "test.dbt_demo.not_null_customer_processed_new_customer_id.3e9bf82172"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select new_customer_id
+from `sctp-dsai-ds3`.`jaffle_demo`.`customer_processed`
+where new_customer_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:16:46.085570 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:16:46.960532 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=sctp-dsai-ds3&j=bq:US:a7a817c7-7772-4bb0-b020-0d1f7d7f6b23&page=queryresults
+[0m16:16:48.352673 [info ] [Thread-1 (]: 1 of 6 PASS not_null_customer_processed_new_customer_id ........................ [[32mPASS[0m in 2.33s]
+[0m16:16:48.359066 [debug] [Thread-1 (]: Finished running node test.dbt_demo.not_null_customer_processed_new_customer_id.3e9bf82172
+[0m16:16:48.362115 [debug] [Thread-1 (]: Began running node test.dbt_demo.not_null_customer_processed_new_last_name.37b135aa02
+[0m16:16:48.365438 [info ] [Thread-1 (]: 2 of 6 START test not_null_customer_processed_new_last_name .................... [RUN]
+[0m16:16:48.368286 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_demo.not_null_customer_processed_new_customer_id.3e9bf82172, now test.dbt_demo.not_null_customer_processed_new_last_name.37b135aa02)
+[0m16:16:48.373016 [debug] [Thread-1 (]: Began compiling node test.dbt_demo.not_null_customer_processed_new_last_name.37b135aa02
+[0m16:16:48.396800 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_demo.not_null_customer_processed_new_last_name.37b135aa02"
+[0m16:16:48.399782 [debug] [Thread-1 (]: Began executing node test.dbt_demo.not_null_customer_processed_new_last_name.37b135aa02
+[0m16:16:48.413427 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_demo.not_null_customer_processed_new_last_name.37b135aa02"
+[0m16:16:48.415558 [debug] [Thread-1 (]: On test.dbt_demo.not_null_customer_processed_new_last_name.37b135aa02: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "dbt_demo", "target_name": "jaffle_sql", "node_id": "test.dbt_demo.not_null_customer_processed_new_last_name.37b135aa02"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select new_last_name
+from `sctp-dsai-ds3`.`jaffle_demo`.`customer_processed`
+where new_last_name is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:16:48.416980 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:16:49.175399 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=sctp-dsai-ds3&j=bq:US:8b79b4ed-bfef-4498-ba13-862c39bf1a11&page=queryresults
+[0m16:16:49.483269 [info ] [Thread-1 (]: 2 of 6 PASS not_null_customer_processed_new_last_name .......................... [[32mPASS[0m in 1.11s]
+[0m16:16:49.488275 [debug] [Thread-1 (]: Finished running node test.dbt_demo.not_null_customer_processed_new_last_name.37b135aa02
+[0m16:16:49.494147 [debug] [Thread-1 (]: Began running node test.dbt_demo.not_null_customers_customer_id.5c9bf9911d
+[0m16:16:49.496632 [info ] [Thread-1 (]: 3 of 6 START test not_null_customers_customer_id ............................... [RUN]
+[0m16:16:49.500443 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_demo.not_null_customer_processed_new_last_name.37b135aa02, now test.dbt_demo.not_null_customers_customer_id.5c9bf9911d)
+[0m16:16:49.503066 [debug] [Thread-1 (]: Began compiling node test.dbt_demo.not_null_customers_customer_id.5c9bf9911d
+[0m16:16:49.521995 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_demo.not_null_customers_customer_id.5c9bf9911d"
+[0m16:16:49.526164 [debug] [Thread-1 (]: Began executing node test.dbt_demo.not_null_customers_customer_id.5c9bf9911d
+[0m16:16:49.533477 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_demo.not_null_customers_customer_id.5c9bf9911d"
+[0m16:16:49.536557 [debug] [Thread-1 (]: On test.dbt_demo.not_null_customers_customer_id.5c9bf9911d: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "dbt_demo", "target_name": "jaffle_sql", "node_id": "test.dbt_demo.not_null_customers_customer_id.5c9bf9911d"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select customer_id
+from `sctp-dsai-ds3`.`jaffle_demo`.`customers`
+where customer_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:16:49.537962 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:16:50.223446 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=sctp-dsai-ds3&j=bq:US:e60e3cdb-66b3-40d4-ad54-076c1f9c0ef3&page=queryresults
+[0m16:16:51.487197 [info ] [Thread-1 (]: 3 of 6 PASS not_null_customers_customer_id ..................................... [[32mPASS[0m in 1.99s]
+[0m16:16:51.491253 [debug] [Thread-1 (]: Finished running node test.dbt_demo.not_null_customers_customer_id.5c9bf9911d
+[0m16:16:51.496062 [debug] [Thread-1 (]: Began running node test.dbt_demo.unique_customer_processed_new_customer_id.82d2306d16
+[0m16:16:51.499921 [info ] [Thread-1 (]: 4 of 6 START test unique_customer_processed_new_customer_id .................... [RUN]
+[0m16:16:51.502340 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_demo.not_null_customers_customer_id.5c9bf9911d, now test.dbt_demo.unique_customer_processed_new_customer_id.82d2306d16)
+[0m16:16:51.504538 [debug] [Thread-1 (]: Began compiling node test.dbt_demo.unique_customer_processed_new_customer_id.82d2306d16
+[0m16:16:51.536972 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_demo.unique_customer_processed_new_customer_id.82d2306d16"
+[0m16:16:51.538454 [debug] [Thread-1 (]: Began executing node test.dbt_demo.unique_customer_processed_new_customer_id.82d2306d16
+[0m16:16:51.545338 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_demo.unique_customer_processed_new_customer_id.82d2306d16"
+[0m16:16:51.548494 [debug] [Thread-1 (]: On test.dbt_demo.unique_customer_processed_new_customer_id.82d2306d16: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "dbt_demo", "target_name": "jaffle_sql", "node_id": "test.dbt_demo.unique_customer_processed_new_customer_id.82d2306d16"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select new_customer_id as unique_field
+  from `sctp-dsai-ds3`.`jaffle_demo`.`customer_processed`
+  where new_customer_id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:16:51.549922 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:16:52.327160 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=sctp-dsai-ds3&j=bq:US:cbc50fdb-b094-47cb-8133-07b69a6a8440&page=queryresults
+[0m16:16:53.530097 [info ] [Thread-1 (]: 4 of 6 PASS unique_customer_processed_new_customer_id .......................... [[32mPASS[0m in 2.03s]
+[0m16:16:53.531757 [debug] [Thread-1 (]: Finished running node test.dbt_demo.unique_customer_processed_new_customer_id.82d2306d16
+[0m16:16:53.543677 [debug] [Thread-1 (]: Began running node test.dbt_demo.unique_customer_processed_new_last_name.4734b0fb4d
+[0m16:16:53.545406 [info ] [Thread-1 (]: 5 of 6 START test unique_customer_processed_new_last_name ...................... [RUN]
+[0m16:16:53.547988 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_demo.unique_customer_processed_new_customer_id.82d2306d16, now test.dbt_demo.unique_customer_processed_new_last_name.4734b0fb4d)
+[0m16:16:53.549706 [debug] [Thread-1 (]: Began compiling node test.dbt_demo.unique_customer_processed_new_last_name.4734b0fb4d
+[0m16:16:53.571396 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_demo.unique_customer_processed_new_last_name.4734b0fb4d"
+[0m16:16:53.575830 [debug] [Thread-1 (]: Began executing node test.dbt_demo.unique_customer_processed_new_last_name.4734b0fb4d
+[0m16:16:53.587053 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_demo.unique_customer_processed_new_last_name.4734b0fb4d"
+[0m16:16:53.589059 [debug] [Thread-1 (]: On test.dbt_demo.unique_customer_processed_new_last_name.4734b0fb4d: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "dbt_demo", "target_name": "jaffle_sql", "node_id": "test.dbt_demo.unique_customer_processed_new_last_name.4734b0fb4d"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select new_last_name as unique_field
+  from `sctp-dsai-ds3`.`jaffle_demo`.`customer_processed`
+  where new_last_name is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:16:53.592570 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:16:54.328019 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=sctp-dsai-ds3&j=bq:US:eaee2b4e-7449-4b75-b1bb-257b7de17d0d&page=queryresults
+[0m16:16:55.405331 [error] [Thread-1 (]: 5 of 6 FAIL 17 unique_customer_processed_new_last_name ......................... [[31mFAIL 17[0m in 1.86s]
+[0m16:16:55.407420 [debug] [Thread-1 (]: Finished running node test.dbt_demo.unique_customer_processed_new_last_name.4734b0fb4d
+[0m16:16:55.408542 [debug] [Thread-1 (]: Began running node test.dbt_demo.unique_customers_customer_id.c5af1ff4b1
+[0m16:16:55.410262 [info ] [Thread-1 (]: 6 of 6 START test unique_customers_customer_id ................................. [RUN]
+[0m16:16:55.414883 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_demo.unique_customer_processed_new_last_name.4734b0fb4d, now test.dbt_demo.unique_customers_customer_id.c5af1ff4b1)
+[0m16:16:55.418473 [debug] [Thread-1 (]: Began compiling node test.dbt_demo.unique_customers_customer_id.c5af1ff4b1
+[0m16:16:55.431755 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_demo.unique_customers_customer_id.c5af1ff4b1"
+[0m16:16:55.438075 [debug] [Thread-1 (]: Began executing node test.dbt_demo.unique_customers_customer_id.c5af1ff4b1
+[0m16:16:55.445929 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_demo.unique_customers_customer_id.c5af1ff4b1"
+[0m16:16:55.452474 [debug] [Thread-1 (]: On test.dbt_demo.unique_customers_customer_id.c5af1ff4b1: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "dbt_demo", "target_name": "jaffle_sql", "node_id": "test.dbt_demo.unique_customers_customer_id.c5af1ff4b1"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select customer_id as unique_field
+  from `sctp-dsai-ds3`.`jaffle_demo`.`customers`
+  where customer_id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:16:55.455238 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:16:56.227156 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=sctp-dsai-ds3&j=bq:US:cb61940f-e495-4081-aa2d-8272a7f59b89&page=queryresults
+[0m16:16:57.536552 [info ] [Thread-1 (]: 6 of 6 PASS unique_customers_customer_id ....................................... [[32mPASS[0m in 2.12s]
+[0m16:16:57.541389 [debug] [Thread-1 (]: Finished running node test.dbt_demo.unique_customers_customer_id.c5af1ff4b1
+[0m16:16:57.546886 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m16:16:57.548985 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:16:57.549887 [debug] [MainThread]: Connection 'test.dbt_demo.unique_customers_customer_id.c5af1ff4b1' was properly closed.
+[0m16:16:57.551174 [info ] [MainThread]: 
+[0m16:16:57.552206 [info ] [MainThread]: Finished running 6 data tests in 0 hours 0 minutes and 14.84 seconds (14.84s).
+[0m16:16:57.559013 [debug] [MainThread]: Command end result
+[0m16:16:57.661486 [debug] [MainThread]: Wrote artifact WritableManifest to /home/ds2/lesson/5m-data-2.7-data-orchestration-testing/extra/dagster_orchestration_dbt/target/manifest.json
+[0m16:16:57.665537 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/ds2/lesson/5m-data-2.7-data-orchestration-testing/extra/dagster_orchestration_dbt/target/semantic_manifest.json
+[0m16:16:57.679756 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/ds2/lesson/5m-data-2.7-data-orchestration-testing/extra/dagster_orchestration_dbt/target/run_results.json
+[0m16:16:57.680546 [info ] [MainThread]: 
+[0m16:16:57.681411 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m16:16:57.683022 [info ] [MainThread]: 
+[0m16:16:57.684528 [error] [MainThread]: [31mFailure in test unique_customer_processed_new_last_name (dbt/models/pipelines/customer_processed/customer_processed.yml)[0m
+[0m16:16:57.685173 [error] [MainThread]:   Got 17 results, configured to fail if != 0
+[0m16:16:57.685733 [info ] [MainThread]: 
+[0m16:16:57.686429 [info ] [MainThread]:   compiled code at target/compiled/dbt_demo/dbt/models/pipelines/customer_processed/customer_processed.yml/unique_customer_processed_new_last_name.sql
+[0m16:16:57.687006 [info ] [MainThread]: 
+[0m16:16:57.687597 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=1 SKIP=0 TOTAL=6
+[0m16:16:57.689273 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": false, "command_wall_clock_time": 41.439526, "process_in_blocks": "142896", "process_kernel_time": 3.60694, "process_mem_max_rss": "407616", "process_out_blocks": "2216", "process_user_time": 13.507262}
+[0m16:16:57.690088 [debug] [MainThread]: Command `dbt test` failed at 16:16:57.689914 after 41.44 seconds
+[0m16:16:57.690776 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x776d1c388c10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x776d18140b10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x776d182c4ad0>]}
+[0m16:16:57.692041 [debug] [MainThread]: Flushing usage events
+[0m16:16:59.076710 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:18:31.313553 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x742812797990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7428124bbb10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x742812649610>]}
+
+
+============================== 16:18:31.317912 | cc8bd2e0-df3a-4a61-80f2-9eccd56c71f8 ==============================
+[0m16:18:31.317912 [info ] [MainThread]: Running with dbt=1.9.6
+[0m16:18:31.318732 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/home/ds2/lesson/5m-data-2.7-data-orchestration-testing/extra/dagster_orchestration_dbt/logs', 'profiles_dir': '/home/ds2/lesson/5m-data-2.7-data-orchestration-testing/extra/dagster_orchestration_dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'invocation_command': 'dbt test', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m16:18:35.740175 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'cc8bd2e0-df3a-4a61-80f2-9eccd56c71f8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7427ef5552d0>]}
+[0m16:18:35.848652 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'cc8bd2e0-df3a-4a61-80f2-9eccd56c71f8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7427ef454810>]}
+[0m16:18:35.849682 [info ] [MainThread]: Registered adapter: bigquery=1.9.2
+[0m16:18:36.163429 [debug] [MainThread]: checksum: dd6dc1e5178459e3de3bf2eeb7c86bed4be2266c311fce8c15d86eb4ff94e7ad, vars: {}, profile: , target: , version: 1.9.6
+[0m16:18:36.329262 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m16:18:36.329836 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m16:18:36.390625 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'cc8bd2e0-df3a-4a61-80f2-9eccd56c71f8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7427ef5d4f10>]}
+[0m16:18:36.499972 [debug] [MainThread]: Wrote artifact WritableManifest to /home/ds2/lesson/5m-data-2.7-data-orchestration-testing/extra/dagster_orchestration_dbt/target/manifest.json
+[0m16:18:36.504036 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/ds2/lesson/5m-data-2.7-data-orchestration-testing/extra/dagster_orchestration_dbt/target/semantic_manifest.json
+[0m16:18:36.532307 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'cc8bd2e0-df3a-4a61-80f2-9eccd56c71f8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7427eef97e50>]}
+[0m16:18:36.533110 [info ] [MainThread]: Found 2 models, 1 seed, 6 data tests, 494 macros
+[0m16:18:36.533723 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'cc8bd2e0-df3a-4a61-80f2-9eccd56c71f8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7427ef717990>]}
+[0m16:18:36.537515 [info ] [MainThread]: 
+[0m16:18:36.538177 [info ] [MainThread]: Concurrency: 1 threads (target='jaffle_sql')
+[0m16:18:36.538688 [info ] [MainThread]: 
+[0m16:18:36.539429 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m16:18:36.544489 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_sctp-dsai-ds3_jaffle_demo'
+[0m16:18:36.546650 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:18:38.764576 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'cc8bd2e0-df3a-4a61-80f2-9eccd56c71f8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7427ef401490>]}
+[0m16:18:38.770089 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:18:38.785093 [debug] [Thread-1 (]: Began running node test.dbt_demo.not_null_customer_processed_new_customer_id.3e9bf82172
+[0m16:18:38.787466 [info ] [Thread-1 (]: 1 of 6 START test not_null_customer_processed_new_customer_id .................. [RUN]
+[0m16:18:38.789960 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_sctp-dsai-ds3_jaffle_demo, now test.dbt_demo.not_null_customer_processed_new_customer_id.3e9bf82172)
+[0m16:18:38.792134 [debug] [Thread-1 (]: Began compiling node test.dbt_demo.not_null_customer_processed_new_customer_id.3e9bf82172
+[0m16:18:38.877863 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_demo.not_null_customer_processed_new_customer_id.3e9bf82172"
+[0m16:18:38.880805 [debug] [Thread-1 (]: Began executing node test.dbt_demo.not_null_customer_processed_new_customer_id.3e9bf82172
+[0m16:18:38.999211 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_demo.not_null_customer_processed_new_customer_id.3e9bf82172"
+[0m16:18:39.005584 [debug] [Thread-1 (]: On test.dbt_demo.not_null_customer_processed_new_customer_id.3e9bf82172: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "dbt_demo", "target_name": "jaffle_sql", "node_id": "test.dbt_demo.not_null_customer_processed_new_customer_id.3e9bf82172"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select new_customer_id
+from `sctp-dsai-ds3`.`jaffle_demo`.`customer_processed`
+where new_customer_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:18:39.007951 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:18:38.422012 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=sctp-dsai-ds3&j=bq:US:c14b4a9f-df4c-414f-b050-75c124728621&page=queryresults
+[0m16:18:39.799211 [info ] [Thread-1 (]: 1 of 6 PASS not_null_customer_processed_new_customer_id ........................ [[32mPASS[0m in 1.01s]
+[0m16:18:39.805152 [debug] [Thread-1 (]: Finished running node test.dbt_demo.not_null_customer_processed_new_customer_id.3e9bf82172
+[0m16:18:39.807064 [debug] [Thread-1 (]: Began running node test.dbt_demo.not_null_customer_processed_new_last_name.37b135aa02
+[0m16:18:39.808811 [info ] [Thread-1 (]: 2 of 6 START test not_null_customer_processed_new_last_name .................... [RUN]
+[0m16:18:39.811072 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_demo.not_null_customer_processed_new_customer_id.3e9bf82172, now test.dbt_demo.not_null_customer_processed_new_last_name.37b135aa02)
+[0m16:18:39.813522 [debug] [Thread-1 (]: Began compiling node test.dbt_demo.not_null_customer_processed_new_last_name.37b135aa02
+[0m16:18:39.825010 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_demo.not_null_customer_processed_new_last_name.37b135aa02"
+[0m16:18:39.827030 [debug] [Thread-1 (]: Began executing node test.dbt_demo.not_null_customer_processed_new_last_name.37b135aa02
+[0m16:18:39.836162 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_demo.not_null_customer_processed_new_last_name.37b135aa02"
+[0m16:18:39.838338 [debug] [Thread-1 (]: On test.dbt_demo.not_null_customer_processed_new_last_name.37b135aa02: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "dbt_demo", "target_name": "jaffle_sql", "node_id": "test.dbt_demo.not_null_customer_processed_new_last_name.37b135aa02"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select new_last_name
+from `sctp-dsai-ds3`.`jaffle_demo`.`customer_processed`
+where new_last_name is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:18:39.839837 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:18:40.509265 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=sctp-dsai-ds3&j=bq:US:7c2a915f-b7d2-410b-9331-16c2e0baae0a&page=queryresults
+[0m16:18:41.709603 [info ] [Thread-1 (]: 2 of 6 PASS not_null_customer_processed_new_last_name .......................... [[32mPASS[0m in 1.89s]
+[0m16:18:41.713153 [debug] [Thread-1 (]: Finished running node test.dbt_demo.not_null_customer_processed_new_last_name.37b135aa02
+[0m16:18:41.715534 [debug] [Thread-1 (]: Began running node test.dbt_demo.not_null_customers_customer_id.5c9bf9911d
+[0m16:18:41.719582 [info ] [Thread-1 (]: 3 of 6 START test not_null_customers_customer_id ............................... [RUN]
+[0m16:18:41.723693 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_demo.not_null_customer_processed_new_last_name.37b135aa02, now test.dbt_demo.not_null_customers_customer_id.5c9bf9911d)
+[0m16:18:41.725557 [debug] [Thread-1 (]: Began compiling node test.dbt_demo.not_null_customers_customer_id.5c9bf9911d
+[0m16:18:41.740722 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_demo.not_null_customers_customer_id.5c9bf9911d"
+[0m16:18:41.742497 [debug] [Thread-1 (]: Began executing node test.dbt_demo.not_null_customers_customer_id.5c9bf9911d
+[0m16:18:41.748712 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_demo.not_null_customers_customer_id.5c9bf9911d"
+[0m16:18:41.752552 [debug] [Thread-1 (]: On test.dbt_demo.not_null_customers_customer_id.5c9bf9911d: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "dbt_demo", "target_name": "jaffle_sql", "node_id": "test.dbt_demo.not_null_customers_customer_id.5c9bf9911d"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select customer_id
+from `sctp-dsai-ds3`.`jaffle_demo`.`customers`
+where customer_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:18:41.753775 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:18:42.394812 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=sctp-dsai-ds3&j=bq:US:5ca84e2e-b7df-4fba-8ced-e6bda1985974&page=queryresults
+[0m16:18:43.668467 [info ] [Thread-1 (]: 3 of 6 PASS not_null_customers_customer_id ..................................... [[32mPASS[0m in 1.94s]
+[0m16:18:43.681357 [debug] [Thread-1 (]: Finished running node test.dbt_demo.not_null_customers_customer_id.5c9bf9911d
+[0m16:18:43.687021 [debug] [Thread-1 (]: Began running node test.dbt_demo.unique_customer_processed_new_customer_id.82d2306d16
+[0m16:18:43.692411 [info ] [Thread-1 (]: 4 of 6 START test unique_customer_processed_new_customer_id .................... [RUN]
+[0m16:18:43.695352 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_demo.not_null_customers_customer_id.5c9bf9911d, now test.dbt_demo.unique_customer_processed_new_customer_id.82d2306d16)
+[0m16:18:43.697182 [debug] [Thread-1 (]: Began compiling node test.dbt_demo.unique_customer_processed_new_customer_id.82d2306d16
+[0m16:18:43.740092 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_demo.unique_customer_processed_new_customer_id.82d2306d16"
+[0m16:18:43.746334 [debug] [Thread-1 (]: Began executing node test.dbt_demo.unique_customer_processed_new_customer_id.82d2306d16
+[0m16:18:43.758518 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_demo.unique_customer_processed_new_customer_id.82d2306d16"
+[0m16:18:43.763673 [debug] [Thread-1 (]: On test.dbt_demo.unique_customer_processed_new_customer_id.82d2306d16: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "dbt_demo", "target_name": "jaffle_sql", "node_id": "test.dbt_demo.unique_customer_processed_new_customer_id.82d2306d16"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select new_customer_id as unique_field
+  from `sctp-dsai-ds3`.`jaffle_demo`.`customer_processed`
+  where new_customer_id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:18:43.766298 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:18:44.398403 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=sctp-dsai-ds3&j=bq:US:f24c2c3c-c4ec-4610-a919-60b506f57b53&page=queryresults
+[0m16:18:45.769324 [info ] [Thread-1 (]: 4 of 6 PASS unique_customer_processed_new_customer_id .......................... [[32mPASS[0m in 2.07s]
+[0m16:18:45.771916 [debug] [Thread-1 (]: Finished running node test.dbt_demo.unique_customer_processed_new_customer_id.82d2306d16
+[0m16:18:45.773295 [debug] [Thread-1 (]: Began running node test.dbt_demo.unique_customer_processed_new_last_name.4734b0fb4d
+[0m16:18:45.775652 [info ] [Thread-1 (]: 5 of 6 START test unique_customer_processed_new_last_name ...................... [RUN]
+[0m16:18:45.777650 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_demo.unique_customer_processed_new_customer_id.82d2306d16, now test.dbt_demo.unique_customer_processed_new_last_name.4734b0fb4d)
+[0m16:18:45.779276 [debug] [Thread-1 (]: Began compiling node test.dbt_demo.unique_customer_processed_new_last_name.4734b0fb4d
+[0m16:18:45.792783 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_demo.unique_customer_processed_new_last_name.4734b0fb4d"
+[0m16:18:45.794974 [debug] [Thread-1 (]: Began executing node test.dbt_demo.unique_customer_processed_new_last_name.4734b0fb4d
+[0m16:18:45.803998 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_demo.unique_customer_processed_new_last_name.4734b0fb4d"
+[0m16:18:45.807192 [debug] [Thread-1 (]: On test.dbt_demo.unique_customer_processed_new_last_name.4734b0fb4d: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "dbt_demo", "target_name": "jaffle_sql", "node_id": "test.dbt_demo.unique_customer_processed_new_last_name.4734b0fb4d"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select new_last_name as unique_field
+  from `sctp-dsai-ds3`.`jaffle_demo`.`customer_processed`
+  where new_last_name is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:18:45.809132 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:18:46.617640 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=sctp-dsai-ds3&j=bq:US:92ea5e04-a3f4-46cf-8351-d5f5ac52fa2b&page=queryresults
+[0m16:18:47.881399 [error] [Thread-1 (]: 5 of 6 FAIL 17 unique_customer_processed_new_last_name ......................... [[31mFAIL 17[0m in 2.10s]
+[0m16:18:47.886455 [debug] [Thread-1 (]: Finished running node test.dbt_demo.unique_customer_processed_new_last_name.4734b0fb4d
+[0m16:18:47.888325 [debug] [Thread-1 (]: Began running node test.dbt_demo.unique_customers_customer_id.c5af1ff4b1
+[0m16:18:47.890532 [info ] [Thread-1 (]: 6 of 6 START test unique_customers_customer_id ................................. [RUN]
+[0m16:18:47.892403 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_demo.unique_customer_processed_new_last_name.4734b0fb4d, now test.dbt_demo.unique_customers_customer_id.c5af1ff4b1)
+[0m16:18:47.896923 [debug] [Thread-1 (]: Began compiling node test.dbt_demo.unique_customers_customer_id.c5af1ff4b1
+[0m16:18:47.914731 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_demo.unique_customers_customer_id.c5af1ff4b1"
+[0m16:18:47.919323 [debug] [Thread-1 (]: Began executing node test.dbt_demo.unique_customers_customer_id.c5af1ff4b1
+[0m16:18:47.932877 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_demo.unique_customers_customer_id.c5af1ff4b1"
+[0m16:18:47.935843 [debug] [Thread-1 (]: On test.dbt_demo.unique_customers_customer_id.c5af1ff4b1: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "dbt_demo", "target_name": "jaffle_sql", "node_id": "test.dbt_demo.unique_customers_customer_id.c5af1ff4b1"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select customer_id as unique_field
+  from `sctp-dsai-ds3`.`jaffle_demo`.`customers`
+  where customer_id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:18:47.937590 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:18:48.515490 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=sctp-dsai-ds3&j=bq:US:40ee2267-a44b-4295-bf26-054b07554277&page=queryresults
+[0m16:18:49.779656 [info ] [Thread-1 (]: 6 of 6 PASS unique_customers_customer_id ....................................... [[32mPASS[0m in 1.89s]
+[0m16:18:49.788080 [debug] [Thread-1 (]: Finished running node test.dbt_demo.unique_customers_customer_id.c5af1ff4b1
+[0m16:18:49.796014 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m16:18:49.802536 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:18:49.804350 [debug] [MainThread]: Connection 'test.dbt_demo.unique_customers_customer_id.c5af1ff4b1' was properly closed.
+[0m16:18:49.805894 [info ] [MainThread]: 
+[0m16:18:49.807215 [info ] [MainThread]: Finished running 6 data tests in 0 hours 0 minutes and 13.27 seconds (13.27s).
+[0m16:18:49.812411 [debug] [MainThread]: Command end result
+[0m16:18:49.887866 [debug] [MainThread]: Wrote artifact WritableManifest to /home/ds2/lesson/5m-data-2.7-data-orchestration-testing/extra/dagster_orchestration_dbt/target/manifest.json
+[0m16:18:49.892302 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/ds2/lesson/5m-data-2.7-data-orchestration-testing/extra/dagster_orchestration_dbt/target/semantic_manifest.json
+[0m16:18:49.904131 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/ds2/lesson/5m-data-2.7-data-orchestration-testing/extra/dagster_orchestration_dbt/target/run_results.json
+[0m16:18:49.905034 [info ] [MainThread]: 
+[0m16:18:49.905739 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m16:18:49.906692 [info ] [MainThread]: 
+[0m16:18:49.907444 [error] [MainThread]: [31mFailure in test unique_customer_processed_new_last_name (dbt/models/pipelines/customer_processed/customer_processed.yml)[0m
+[0m16:18:49.908214 [error] [MainThread]:   Got 17 results, configured to fail if != 0
+[0m16:18:49.908778 [info ] [MainThread]: 
+[0m16:18:49.909703 [info ] [MainThread]:   compiled code at target/compiled/dbt_demo/dbt/models/pipelines/customer_processed/customer_processed.yml/unique_customer_processed_new_last_name.sql
+[0m16:18:49.912003 [info ] [MainThread]: 
+[0m16:18:49.912909 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=1 SKIP=0 TOTAL=6
+[0m16:18:49.914586 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": false, "command_wall_clock_time": 19.972778, "process_in_blocks": "0", "process_kernel_time": 1.682233, "process_mem_max_rss": "407776", "process_out_blocks": "2216", "process_user_time": 7.210131}
+[0m16:18:49.915353 [debug] [MainThread]: Command `dbt test` failed at 16:18:49.915183 after 19.97 seconds
+[0m16:18:49.915980 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7428168f8c50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x742816874310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74281295c550>]}
+[0m16:18:49.916997 [debug] [MainThread]: Flushing usage events
+[0m16:18:51.250959 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:19:37.897274 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75a306d28b10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75a306d20950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75a306b9bb10>]}
+
+
+============================== 16:19:37.901617 | fc362476-1314-4fde-aada-d9ab6ef998dd ==============================
+[0m16:19:37.901617 [info ] [MainThread]: Running with dbt=1.9.6
+[0m16:19:37.902790 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/home/ds2/lesson/5m-data-2.7-data-orchestration-testing/extra/dagster_orchestration_dbt/logs', 'debug': 'False', 'profiles_dir': '/home/ds2/lesson/5m-data-2.7-data-orchestration-testing/extra/dagster_orchestration_dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt debug', 'send_anonymous_usage_stats': 'True'}
+[0m16:19:37.922852 [info ] [MainThread]: dbt version: 1.9.6
+[0m16:19:37.926206 [info ] [MainThread]: python version: 3.11.13
+[0m16:19:37.926890 [info ] [MainThread]: python path: /home/ds2/miniconda3/envs/dagster/bin/python
+[0m16:19:37.927511 [info ] [MainThread]: os info: Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39
+[0m16:19:41.768307 [info ] [MainThread]: Using profiles dir at /home/ds2/lesson/5m-data-2.7-data-orchestration-testing/extra/dagster_orchestration_dbt
+[0m16:19:41.769238 [info ] [MainThread]: Using profiles.yml file at /home/ds2/lesson/5m-data-2.7-data-orchestration-testing/extra/dagster_orchestration_dbt/profiles.yml
+[0m16:19:41.769972 [info ] [MainThread]: Using dbt_project.yml file at /home/ds2/lesson/5m-data-2.7-data-orchestration-testing/extra/dagster_orchestration_dbt/dbt_project.yml
+[0m16:19:41.770647 [info ] [MainThread]: adapter type: bigquery
+[0m16:19:41.771265 [info ] [MainThread]: adapter version: 1.9.2
+[0m16:19:41.010426 [info ] [MainThread]: Configuration:
+[0m16:19:41.011351 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m16:19:41.012147 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m16:19:41.012888 [info ] [MainThread]: Required dependencies:
+[0m16:19:41.013520 [debug] [MainThread]: Executing "git --help"
+[0m16:19:41.017967 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m16:19:41.019126 [debug] [MainThread]: STDERR: "b''"
+[0m16:19:41.020136 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m16:19:41.021245 [info ] [MainThread]: Connection:
+[0m16:19:41.022109 [info ] [MainThread]:   method: oauth
+[0m16:19:41.023370 [info ] [MainThread]:   database: sctp-dsai-ds3
+[0m16:19:41.024548 [info ] [MainThread]:   execution_project: sctp-dsai-ds3
+[0m16:19:41.026163 [info ] [MainThread]:   schema: jaffle_demo
+[0m16:19:41.027198 [info ] [MainThread]:   location: None
+[0m16:19:41.028684 [info ] [MainThread]:   priority: None
+[0m16:19:41.030572 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m16:19:41.031548 [info ] [MainThread]:   impersonate_service_account: None
+[0m16:19:41.032849 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m16:19:41.034801 [info ] [MainThread]:   job_retries: 1
+[0m16:19:41.036681 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m16:19:41.038134 [info ] [MainThread]:   job_execution_timeout_seconds: None
+[0m16:19:41.040550 [info ] [MainThread]:   timeout_seconds: None
+[0m16:19:41.042281 [info ] [MainThread]:   client_id: None
+[0m16:19:41.043623 [info ] [MainThread]:   token_uri: None
+[0m16:19:41.044818 [info ] [MainThread]:   compute_region: None
+[0m16:19:41.046110 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m16:19:41.047252 [info ] [MainThread]:   gcs_bucket: None
+[0m16:19:41.049456 [info ] [MainThread]:   dataproc_batch: None
+[0m16:19:41.051994 [info ] [MainThread]: Registered adapter: bigquery=1.9.2
+[0m16:19:41.420008 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m16:19:41.420936 [debug] [MainThread]: On debug: select 1 as id
+[0m16:19:41.421918 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:19:43.736589 [debug] [MainThread]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=sctp-dsai-ds3&j=bq:US:0d9c11db-1121-48d5-8b02-0a55d9d2f641&page=queryresults
+[0m16:19:44.687220 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m16:19:44.689233 [info ] [MainThread]: [32mAll checks passed![0m
+[0m16:19:44.694206 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 7.8619475, "process_in_blocks": "104", "process_kernel_time": 1.238285, "process_mem_max_rss": "399908", "process_out_blocks": "16", "process_user_time": 5.783842}
+[0m16:19:44.697167 [debug] [MainThread]: Command `dbt debug` succeeded at 16:19:44.696542 after 7.87 seconds
+[0m16:19:44.698853 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m16:19:44.700897 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75a30af88990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75a2e3b3b090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75a306e77850>]}
+[0m16:19:44.704213 [debug] [MainThread]: Flushing usage events
+[0m16:19:46.053937 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:19:53.251382 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7495f6d49bd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7495f7f7c310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7495f6d49f10>]}
+
+
+============================== 16:19:53.255817 | 5c64a5e7-76a0-4fc7-9a91-7b7d46e48e42 ==============================
+[0m16:19:53.255817 [info ] [MainThread]: Running with dbt=1.9.6
+[0m16:19:53.256860 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': '/home/ds2/lesson/5m-data-2.7-data-orchestration-testing/extra/dagster_orchestration_dbt/logs', 'profiles_dir': '/home/ds2/lesson/5m-data-2.7-data-orchestration-testing/extra/dagster_orchestration_dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt run', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m16:19:56.931493 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '5c64a5e7-76a0-4fc7-9a91-7b7d46e48e42', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7495d3d9f750>]}
+[0m16:19:57.030885 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '5c64a5e7-76a0-4fc7-9a91-7b7d46e48e42', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7495d3c39510>]}
+[0m16:19:57.031960 [info ] [MainThread]: Registered adapter: bigquery=1.9.2
+[0m16:19:57.349045 [debug] [MainThread]: checksum: dd6dc1e5178459e3de3bf2eeb7c86bed4be2266c311fce8c15d86eb4ff94e7ad, vars: {}, profile: , target: , version: 1.9.6
+[0m16:19:57.494796 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m16:19:57.495423 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m16:19:57.569840 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '5c64a5e7-76a0-4fc7-9a91-7b7d46e48e42', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7495d3eb6e90>]}
+[0m16:19:57.672623 [debug] [MainThread]: Wrote artifact WritableManifest to /home/ds2/lesson/5m-data-2.7-data-orchestration-testing/extra/dagster_orchestration_dbt/target/manifest.json
+[0m16:19:57.674903 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/ds2/lesson/5m-data-2.7-data-orchestration-testing/extra/dagster_orchestration_dbt/target/semantic_manifest.json
+[0m16:19:57.688994 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '5c64a5e7-76a0-4fc7-9a91-7b7d46e48e42', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7495d3acb850>]}
+[0m16:19:57.689827 [info ] [MainThread]: Found 2 models, 1 seed, 6 data tests, 494 macros
+[0m16:19:57.690445 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '5c64a5e7-76a0-4fc7-9a91-7b7d46e48e42', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7495d393b5d0>]}
+[0m16:19:57.692849 [info ] [MainThread]: 
+[0m16:19:57.693512 [info ] [MainThread]: Concurrency: 1 threads (target='jaffle_sql')
+[0m16:19:57.694156 [info ] [MainThread]: 
+[0m16:19:57.695198 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m16:19:57.702375 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_sctp-dsai-ds3'
+[0m16:19:57.703480 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:19:59.875563 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_sctp-dsai-ds3, now list_sctp-dsai-ds3_jaffle_demo)
+[0m16:19:59.876977 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:20:00.405246 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '5c64a5e7-76a0-4fc7-9a91-7b7d46e48e42', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7495d39239d0>]}
+[0m16:20:00.408039 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:20:00.419936 [debug] [Thread-1 (]: Began running node model.dbt_demo.customers
+[0m16:20:00.422788 [info ] [Thread-1 (]: 1 of 2 START sql table model jaffle_demo.customers ............................. [RUN]
+[0m16:20:00.426195 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_sctp-dsai-ds3_jaffle_demo, now model.dbt_demo.customers)
+[0m16:20:00.428824 [debug] [Thread-1 (]: Began compiling node model.dbt_demo.customers
+[0m16:20:00.486456 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_demo.customers"
+[0m16:20:00.488241 [debug] [Thread-1 (]: Began executing node model.dbt_demo.customers
+[0m16:20:00.525032 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:20:01.134266 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_demo.customers"
+[0m16:20:01.135927 [debug] [Thread-1 (]: On model.dbt_demo.customers: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "dbt_demo", "target_name": "jaffle_sql", "node_id": "model.dbt_demo.customers"} */
+
+  
+    
+
+    create or replace table `sctp-dsai-ds3`.`jaffle_demo`.`customers`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      with source as (
+    select * from `sctp-dsai-ds3`.`jaffle_demo`.`raw_customers`
+
+),
+
+renamed as (
+
+    select
+        id as customer_id,
+        first_name,
+        last_name
+
+    from source
+
+)
+
+select * from renamed
+    );
+  
+[0m16:20:01.771618 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=sctp-dsai-ds3&j=bq:US:d1533d93-e4d9-4600-a08c-da9b957d5a74&page=queryresults
+[0m16:20:07.849301 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '5c64a5e7-76a0-4fc7-9a91-7b7d46e48e42', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7495d40a27d0>]}
+[0m16:20:07.851133 [info ] [Thread-1 (]: 1 of 2 OK created sql table model jaffle_demo.customers ........................ [[32mCREATE TABLE (100.0 rows, 1.9 KiB processed)[0m in 7.42s]
+[0m16:20:07.853288 [debug] [Thread-1 (]: Finished running node model.dbt_demo.customers
+[0m16:20:07.856086 [debug] [Thread-1 (]: Began running node model.dbt_demo.customer_processed
+[0m16:20:07.857318 [info ] [Thread-1 (]: 2 of 2 START sql table model jaffle_demo.customer_processed .................... [RUN]
+[0m16:20:07.858829 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_demo.customers, now model.dbt_demo.customer_processed)
+[0m16:20:07.860829 [debug] [Thread-1 (]: Began compiling node model.dbt_demo.customer_processed
+[0m16:20:07.869608 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_demo.customer_processed"
+[0m16:20:07.871342 [debug] [Thread-1 (]: Began executing node model.dbt_demo.customer_processed
+[0m16:20:07.886365 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:20:08.311766 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_demo.customer_processed"
+[0m16:20:08.314982 [debug] [Thread-1 (]: On model.dbt_demo.customer_processed: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "dbt_demo", "target_name": "jaffle_sql", "node_id": "model.dbt_demo.customer_processed"} */
+
+  
+    
+
+    create or replace table `sctp-dsai-ds3`.`jaffle_demo`.`customer_processed`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      with source as (
+    select * from `sctp-dsai-ds3`.`jaffle_demo`.`customers`
+
+),
+
+processing as (
+
+    select
+        customer_id as new_customer_id,
+        last_name as new_last_name
+
+    from source
+
+)
+
+select * from processing
+    );
+  
+[0m16:20:08.837463 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=sctp-dsai-ds3&j=bq:US:76248bf3-80a9-41cb-96d8-01bacb9c5037&page=queryresults
+[0m16:20:10.991545 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '5c64a5e7-76a0-4fc7-9a91-7b7d46e48e42', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7495d38bf5d0>]}
+[0m16:20:10.995269 [info ] [Thread-1 (]: 2 of 2 OK created sql table model jaffle_demo.customer_processed ............... [[32mCREATE TABLE (100.0 rows, 1.2 KiB processed)[0m in 3.13s]
+[0m16:20:10.999192 [debug] [Thread-1 (]: Finished running node model.dbt_demo.customer_processed
+[0m16:20:11.006364 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m16:20:11.010784 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:20:11.014050 [debug] [MainThread]: Connection 'model.dbt_demo.customer_processed' was properly closed.
+[0m16:20:11.017040 [info ] [MainThread]: 
+[0m16:20:11.020129 [info ] [MainThread]: Finished running 2 table models in 0 hours 0 minutes and 13.32 seconds (13.32s).
+[0m16:20:11.027638 [debug] [MainThread]: Command end result
+[0m16:20:11.110840 [debug] [MainThread]: Wrote artifact WritableManifest to /home/ds2/lesson/5m-data-2.7-data-orchestration-testing/extra/dagster_orchestration_dbt/target/manifest.json
+[0m16:20:11.113811 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/ds2/lesson/5m-data-2.7-data-orchestration-testing/extra/dagster_orchestration_dbt/target/semantic_manifest.json
+[0m16:20:11.123537 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/ds2/lesson/5m-data-2.7-data-orchestration-testing/extra/dagster_orchestration_dbt/target/run_results.json
+[0m16:20:11.124338 [info ] [MainThread]: 
+[0m16:20:11.125289 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m16:20:11.126135 [info ] [MainThread]: 
+[0m16:20:11.127005 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m16:20:11.128900 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 17.954643, "process_in_blocks": "0", "process_kernel_time": 1.161849, "process_mem_max_rss": "407072", "process_out_blocks": "2112", "process_user_time": 6.239133}
+[0m16:20:11.129882 [debug] [MainThread]: Command `dbt run` succeeded at 16:20:11.129607 after 17.96 seconds
+[0m16:20:11.130648 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7495f6b90810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7495faf88990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7495f6e93950>]}
+[0m16:20:11.131742 [debug] [MainThread]: Flushing usage events
+[0m16:20:12.420915 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:20:19.651635 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71717fc28890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7171808b9010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71717fc28610>]}
+
+
+============================== 16:20:19.656035 | 1c756cd9-9fe5-4994-8d56-7ca9646edcfd ==============================
+[0m16:20:19.656035 [info ] [MainThread]: Running with dbt=1.9.6
+[0m16:20:19.657177 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/ds2/lesson/5m-data-2.7-data-orchestration-testing/extra/dagster_orchestration_dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/home/ds2/lesson/5m-data-2.7-data-orchestration-testing/extra/dagster_orchestration_dbt/logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt test', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m16:20:23.387210 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '1c756cd9-9fe5-4994-8d56-7ca9646edcfd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71715d229b90>]}
+[0m16:20:23.477444 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '1c756cd9-9fe5-4994-8d56-7ca9646edcfd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7171824e5890>]}
+[0m16:20:23.478647 [info ] [MainThread]: Registered adapter: bigquery=1.9.2
+[0m16:20:23.791570 [debug] [MainThread]: checksum: dd6dc1e5178459e3de3bf2eeb7c86bed4be2266c311fce8c15d86eb4ff94e7ad, vars: {}, profile: , target: , version: 1.9.6
+[0m16:20:23.954442 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m16:20:23.955655 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m16:20:24.010744 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '1c756cd9-9fe5-4994-8d56-7ca9646edcfd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71717fc21d90>]}
+[0m16:20:24.109526 [debug] [MainThread]: Wrote artifact WritableManifest to /home/ds2/lesson/5m-data-2.7-data-orchestration-testing/extra/dagster_orchestration_dbt/target/manifest.json
+[0m16:20:24.111981 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/ds2/lesson/5m-data-2.7-data-orchestration-testing/extra/dagster_orchestration_dbt/target/semantic_manifest.json
+[0m16:20:24.138336 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '1c756cd9-9fe5-4994-8d56-7ca9646edcfd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71715c54bd90>]}
+[0m16:20:24.139452 [info ] [MainThread]: Found 2 models, 1 seed, 6 data tests, 494 macros
+[0m16:20:24.141709 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1c756cd9-9fe5-4994-8d56-7ca9646edcfd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71715c816790>]}
+[0m16:20:24.145367 [info ] [MainThread]: 
+[0m16:20:24.146191 [info ] [MainThread]: Concurrency: 1 threads (target='jaffle_sql')
+[0m16:20:24.146872 [info ] [MainThread]: 
+[0m16:20:24.147934 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m16:20:24.156507 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_sctp-dsai-ds3_jaffle_demo'
+[0m16:20:24.157395 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:20:27.295084 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1c756cd9-9fe5-4994-8d56-7ca9646edcfd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71715c825a50>]}
+[0m16:20:27.297896 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:20:27.311950 [debug] [Thread-1 (]: Began running node test.dbt_demo.not_null_customer_processed_new_customer_id.3e9bf82172
+[0m16:20:27.314257 [info ] [Thread-1 (]: 1 of 6 START test not_null_customer_processed_new_customer_id .................. [RUN]
+[0m16:20:27.316979 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_sctp-dsai-ds3_jaffle_demo, now test.dbt_demo.not_null_customer_processed_new_customer_id.3e9bf82172)
+[0m16:20:27.319066 [debug] [Thread-1 (]: Began compiling node test.dbt_demo.not_null_customer_processed_new_customer_id.3e9bf82172
+[0m16:20:27.421100 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_demo.not_null_customer_processed_new_customer_id.3e9bf82172"
+[0m16:20:27.424047 [debug] [Thread-1 (]: Began executing node test.dbt_demo.not_null_customer_processed_new_customer_id.3e9bf82172
+[0m16:20:27.484290 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_demo.not_null_customer_processed_new_customer_id.3e9bf82172"
+[0m16:20:27.485565 [debug] [Thread-1 (]: On test.dbt_demo.not_null_customer_processed_new_customer_id.3e9bf82172: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "dbt_demo", "target_name": "jaffle_sql", "node_id": "test.dbt_demo.not_null_customer_processed_new_customer_id.3e9bf82172"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select new_customer_id
+from `sctp-dsai-ds3`.`jaffle_demo`.`customer_processed`
+where new_customer_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:20:27.486422 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:20:28.239399 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=sctp-dsai-ds3&j=bq:US:7d302547-4d1d-4d66-b398-bdce5f855190&page=queryresults
+[0m16:20:29.521067 [info ] [Thread-1 (]: 1 of 6 PASS not_null_customer_processed_new_customer_id ........................ [[32mPASS[0m in 2.20s]
+[0m16:20:29.524596 [debug] [Thread-1 (]: Finished running node test.dbt_demo.not_null_customer_processed_new_customer_id.3e9bf82172
+[0m16:20:29.527308 [debug] [Thread-1 (]: Began running node test.dbt_demo.not_null_customer_processed_new_last_name.37b135aa02
+[0m16:20:29.530710 [info ] [Thread-1 (]: 2 of 6 START test not_null_customer_processed_new_last_name .................... [RUN]
+[0m16:20:29.534358 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_demo.not_null_customer_processed_new_customer_id.3e9bf82172, now test.dbt_demo.not_null_customer_processed_new_last_name.37b135aa02)
+[0m16:20:29.539886 [debug] [Thread-1 (]: Began compiling node test.dbt_demo.not_null_customer_processed_new_last_name.37b135aa02
+[0m16:20:29.579168 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_demo.not_null_customer_processed_new_last_name.37b135aa02"
+[0m16:20:29.583701 [debug] [Thread-1 (]: Began executing node test.dbt_demo.not_null_customer_processed_new_last_name.37b135aa02
+[0m16:20:29.592037 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_demo.not_null_customer_processed_new_last_name.37b135aa02"
+[0m16:20:29.593880 [debug] [Thread-1 (]: On test.dbt_demo.not_null_customer_processed_new_last_name.37b135aa02: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "dbt_demo", "target_name": "jaffle_sql", "node_id": "test.dbt_demo.not_null_customer_processed_new_last_name.37b135aa02"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select new_last_name
+from `sctp-dsai-ds3`.`jaffle_demo`.`customer_processed`
+where new_last_name is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:20:29.596996 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:20:30.348942 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=sctp-dsai-ds3&j=bq:US:05754433-9bd8-4c41-b0fd-86dc7a3025f6&page=queryresults
+[0m16:20:31.616502 [info ] [Thread-1 (]: 2 of 6 PASS not_null_customer_processed_new_last_name .......................... [[32mPASS[0m in 2.08s]
+[0m16:20:31.621652 [debug] [Thread-1 (]: Finished running node test.dbt_demo.not_null_customer_processed_new_last_name.37b135aa02
+[0m16:20:31.630436 [debug] [Thread-1 (]: Began running node test.dbt_demo.not_null_customers_customer_id.5c9bf9911d
+[0m16:20:31.636415 [info ] [Thread-1 (]: 3 of 6 START test not_null_customers_customer_id ............................... [RUN]
+[0m16:20:31.641079 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_demo.not_null_customer_processed_new_last_name.37b135aa02, now test.dbt_demo.not_null_customers_customer_id.5c9bf9911d)
+[0m16:20:31.646509 [debug] [Thread-1 (]: Began compiling node test.dbt_demo.not_null_customers_customer_id.5c9bf9911d
+[0m16:20:31.678302 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_demo.not_null_customers_customer_id.5c9bf9911d"
+[0m16:20:31.680925 [debug] [Thread-1 (]: Began executing node test.dbt_demo.not_null_customers_customer_id.5c9bf9911d
+[0m16:20:31.694816 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_demo.not_null_customers_customer_id.5c9bf9911d"
+[0m16:20:31.696399 [debug] [Thread-1 (]: On test.dbt_demo.not_null_customers_customer_id.5c9bf9911d: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "dbt_demo", "target_name": "jaffle_sql", "node_id": "test.dbt_demo.not_null_customers_customer_id.5c9bf9911d"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select customer_id
+from `sctp-dsai-ds3`.`jaffle_demo`.`customers`
+where customer_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:20:31.697352 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:20:32.353518 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=sctp-dsai-ds3&j=bq:US:752995e6-594e-4559-91db-7fa4b17fc8d2&page=queryresults
+[0m16:20:33.517173 [info ] [Thread-1 (]: 3 of 6 PASS not_null_customers_customer_id ..................................... [[32mPASS[0m in 1.88s]
+[0m16:20:33.520899 [debug] [Thread-1 (]: Finished running node test.dbt_demo.not_null_customers_customer_id.5c9bf9911d
+[0m16:20:33.526502 [debug] [Thread-1 (]: Began running node test.dbt_demo.unique_customer_processed_new_customer_id.82d2306d16
+[0m16:20:33.534796 [info ] [Thread-1 (]: 4 of 6 START test unique_customer_processed_new_customer_id .................... [RUN]
+[0m16:20:33.539477 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_demo.not_null_customers_customer_id.5c9bf9911d, now test.dbt_demo.unique_customer_processed_new_customer_id.82d2306d16)
+[0m16:20:33.546867 [debug] [Thread-1 (]: Began compiling node test.dbt_demo.unique_customer_processed_new_customer_id.82d2306d16
+[0m16:20:33.585521 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_demo.unique_customer_processed_new_customer_id.82d2306d16"
+[0m16:20:33.588274 [debug] [Thread-1 (]: Began executing node test.dbt_demo.unique_customer_processed_new_customer_id.82d2306d16
+[0m16:20:33.597644 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_demo.unique_customer_processed_new_customer_id.82d2306d16"
+[0m16:20:33.605571 [debug] [Thread-1 (]: On test.dbt_demo.unique_customer_processed_new_customer_id.82d2306d16: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "dbt_demo", "target_name": "jaffle_sql", "node_id": "test.dbt_demo.unique_customer_processed_new_customer_id.82d2306d16"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select new_customer_id as unique_field
+  from `sctp-dsai-ds3`.`jaffle_demo`.`customer_processed`
+  where new_customer_id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:20:33.608371 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:20:34.251699 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=sctp-dsai-ds3&j=bq:US:b558fbd9-25d2-4bfb-b28a-94c64a9d214e&page=queryresults
+[0m16:20:35.623465 [info ] [Thread-1 (]: 4 of 6 PASS unique_customer_processed_new_customer_id .......................... [[32mPASS[0m in 2.08s]
+[0m16:20:35.626785 [debug] [Thread-1 (]: Finished running node test.dbt_demo.unique_customer_processed_new_customer_id.82d2306d16
+[0m16:20:35.628915 [debug] [Thread-1 (]: Began running node test.dbt_demo.unique_customer_processed_new_last_name.4734b0fb4d
+[0m16:20:35.632498 [info ] [Thread-1 (]: 5 of 6 START test unique_customer_processed_new_last_name ...................... [RUN]
+[0m16:20:35.637395 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_demo.unique_customer_processed_new_customer_id.82d2306d16, now test.dbt_demo.unique_customer_processed_new_last_name.4734b0fb4d)
+[0m16:20:35.640243 [debug] [Thread-1 (]: Began compiling node test.dbt_demo.unique_customer_processed_new_last_name.4734b0fb4d
+[0m16:20:35.679930 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_demo.unique_customer_processed_new_last_name.4734b0fb4d"
+[0m16:20:35.681751 [debug] [Thread-1 (]: Began executing node test.dbt_demo.unique_customer_processed_new_last_name.4734b0fb4d
+[0m16:20:35.691956 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_demo.unique_customer_processed_new_last_name.4734b0fb4d"
+[0m16:20:35.693939 [debug] [Thread-1 (]: On test.dbt_demo.unique_customer_processed_new_last_name.4734b0fb4d: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "dbt_demo", "target_name": "jaffle_sql", "node_id": "test.dbt_demo.unique_customer_processed_new_last_name.4734b0fb4d"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select new_last_name as unique_field
+  from `sctp-dsai-ds3`.`jaffle_demo`.`customer_processed`
+  where new_last_name is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:20:35.695259 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:20:36.465608 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=sctp-dsai-ds3&j=bq:US:932e2206-f457-4d6c-9744-67fb09cb0368&page=queryresults
+[0m16:20:37.732972 [error] [Thread-1 (]: 5 of 6 FAIL 17 unique_customer_processed_new_last_name ......................... [[31mFAIL 17[0m in 2.10s]
+[0m16:20:37.736600 [debug] [Thread-1 (]: Finished running node test.dbt_demo.unique_customer_processed_new_last_name.4734b0fb4d
+[0m16:20:37.739424 [debug] [Thread-1 (]: Began running node test.dbt_demo.unique_customers_customer_id.c5af1ff4b1
+[0m16:20:37.742757 [info ] [Thread-1 (]: 6 of 6 START test unique_customers_customer_id ................................. [RUN]
+[0m16:20:37.747519 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_demo.unique_customer_processed_new_last_name.4734b0fb4d, now test.dbt_demo.unique_customers_customer_id.c5af1ff4b1)
+[0m16:20:37.751221 [debug] [Thread-1 (]: Began compiling node test.dbt_demo.unique_customers_customer_id.c5af1ff4b1
+[0m16:20:37.787560 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_demo.unique_customers_customer_id.c5af1ff4b1"
+[0m16:20:37.789898 [debug] [Thread-1 (]: Began executing node test.dbt_demo.unique_customers_customer_id.c5af1ff4b1
+[0m16:20:37.796959 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_demo.unique_customers_customer_id.c5af1ff4b1"
+[0m16:20:37.800618 [debug] [Thread-1 (]: On test.dbt_demo.unique_customers_customer_id.c5af1ff4b1: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "dbt_demo", "target_name": "jaffle_sql", "node_id": "test.dbt_demo.unique_customers_customer_id.c5af1ff4b1"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select customer_id as unique_field
+  from `sctp-dsai-ds3`.`jaffle_demo`.`customers`
+  where customer_id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:20:37.802132 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:20:38.469852 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=sctp-dsai-ds3&j=bq:US:1cef270c-4945-407e-9254-9483d0f8dbce&page=queryresults
+[0m16:20:39.736592 [info ] [Thread-1 (]: 6 of 6 PASS unique_customers_customer_id ....................................... [[32mPASS[0m in 1.99s]
+[0m16:20:39.740254 [debug] [Thread-1 (]: Finished running node test.dbt_demo.unique_customers_customer_id.c5af1ff4b1
+[0m16:20:39.749249 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m16:20:39.754540 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:20:39.757505 [debug] [MainThread]: Connection 'test.dbt_demo.unique_customers_customer_id.c5af1ff4b1' was properly closed.
+[0m16:20:39.761791 [info ] [MainThread]: 
+[0m16:20:39.764205 [info ] [MainThread]: Finished running 6 data tests in 0 hours 0 minutes and 15.61 seconds (15.61s).
+[0m16:20:39.777066 [debug] [MainThread]: Command end result
+[0m16:20:39.900932 [debug] [MainThread]: Wrote artifact WritableManifest to /home/ds2/lesson/5m-data-2.7-data-orchestration-testing/extra/dagster_orchestration_dbt/target/manifest.json
+[0m16:20:39.906054 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/ds2/lesson/5m-data-2.7-data-orchestration-testing/extra/dagster_orchestration_dbt/target/semantic_manifest.json
+[0m16:20:39.927889 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/ds2/lesson/5m-data-2.7-data-orchestration-testing/extra/dagster_orchestration_dbt/target/run_results.json
+[0m16:20:39.928974 [info ] [MainThread]: 
+[0m16:20:39.930222 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m16:20:39.931438 [info ] [MainThread]: 
+[0m16:20:39.932982 [error] [MainThread]: [31mFailure in test unique_customer_processed_new_last_name (dbt/models/pipelines/customer_processed/customer_processed.yml)[0m
+[0m16:20:39.934440 [error] [MainThread]:   Got 17 results, configured to fail if != 0
+[0m16:20:39.935639 [info ] [MainThread]: 
+[0m16:20:39.936818 [info ] [MainThread]:   compiled code at target/compiled/dbt_demo/dbt/models/pipelines/customer_processed/customer_processed.yml/unique_customer_processed_new_last_name.sql
+[0m16:20:39.938012 [info ] [MainThread]: 
+[0m16:20:39.939399 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=1 SKIP=0 TOTAL=6
+[0m16:20:39.942669 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": false, "command_wall_clock_time": 20.373446, "process_in_blocks": "0", "process_kernel_time": 1.291027, "process_mem_max_rss": "407756", "process_out_blocks": "2208", "process_user_time": 6.478399}
+[0m16:20:39.944429 [debug] [MainThread]: Command `dbt test` failed at 16:20:39.943914 after 20.38 seconds
+[0m16:20:39.952364 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71717fa70bd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71717fa70710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71717fc691d0>]}
+[0m16:20:39.953473 [debug] [MainThread]: Flushing usage events
+[0m16:20:41.313616 [debug] [MainThread]: An error was encountered while trying to flush usage events
