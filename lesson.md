@@ -265,4 +265,48 @@ DAGSTER_DBT_PARSE_PROJECT_ON_LOAD=1 dagster dev
 
 We can now trigger the Dbt pipeline from within Dagster by selecting the assets and clicking 'Materialize selected'.
 
-We can even schedule the pipeline to run daily by uncommenting the code in `resale_flat_dagster/resale_flat_dagster/schedules.py`. Now click 'Reload definitions' and you will see the new schedule.
+To set up the scheduler, follow the steps below.
+
+In `resale_flat_dagster/resale_flat_dagster/schedules.py`, enter the following code and save:
+```
+from dagster_dbt import build_schedule_from_dbt_selection
+
+from .assets import resale_flat_dbt_assets
+
+materialize_dbt_job_schedule = build_schedule_from_dbt_selection(
+    [resale_flat_dbt_assets],
+    job_name="materialize_dbt_models",
+    cron_schedule="0 0 * * *", # Enter your preferred cron schedule here.
+    dbt_select="fqn:*",
+)
+
+# Access the job object created by the schedule
+materialize_dbt_job = materialize_dbt_job_schedule.job
+
+schedules = [materialize_dbt_job_schedule]
+jobs = [materialize_dbt_job]
+```
+
+In `resale_flat_dagster/resale_flat_dagster/definitions.py`, enter the following code and save:
+```
+from dagster import Definitions
+from dagster_dbt import DbtCliResource
+from .assets import resale_flat_dbt_assets
+from .project import resale_flat_project
+from .schedules import schedules, jobs
+
+defs = Definitions(
+    assets=[resale_flat_dbt_assets],
+    schedules=schedules,
+    jobs=jobs,
+    resources={
+        "dbt": DbtCliResource(project_dir=resale_flat_project),
+    },
+)
+```
+
+Now in the Dagster UI, click 'Reload definitions' and you will see the new schedule.
+
+Toggle on the scheduler(see red box in screenshot below) and your job will run at the scheduled time.
+
+![dagster scheduler image](./assets/dagster_scheduler.png)
